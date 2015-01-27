@@ -1,0 +1,137 @@
+html{
+	height: 100%;
+	width: 100%;
+}
+body{
+	background-color: #323332;
+	color: #ffffff;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+}
+a{
+	color: #ffffff;
+	text-decoration: none;
+	&:hover{
+		color:#feff51;
+	}
+}
+.raleway{
+	font-family: Raleway;
+}
+.pacifico{
+	font-family: Pacifico;
+}
+
+.light-blue{
+	color: #10c0ee;
+}
+.yellow{
+	color: #feff51;
+}
+.row{
+	width: 100% !important;
+}
+.rounded{
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+// Nav part
+.nav{
+	background-color: #414141;
+	height: 100%;
+	width: 20%;
+	position: fixed;
+	li{
+		display: inline-block;
+		width: auto;
+		margin-right: 20px;
+	}
+	.footer{
+		font-size: 15px;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		text-align: center;
+		span{
+			font-family: Pacifico;
+			color: #865F93;
+		}
+	}
+}
+
+
+// Content part
+.content{
+	width: 80%;
+	margin-left: 20%;
+	min-height: 100%;
+}
+.mainTitle{
+	font-size: 30px;
+	text-align: center;
+}
+.main-board{
+	text-align: center;
+	span[class^="icon-"], span[class^="icon_"]{
+		font-size: 140px;
+	}
+	a{
+		color: inherit;
+		&:hover{
+			color: #7CB7E0;
+		}
+	}
+}
+section.infos + section.main-board{
+	margin-top: 50px;
+}
+.infos{
+	text-align: center;
+	.list{
+		text-align: left;
+	}
+	h2{
+		color: #818181;
+	}
+	p{
+		font-weight: 200;
+	}
+	.type{
+		font-weight: 400;
+		color: #7CB7E0;
+	}
+}
+
+section.framework{
+	font-size: 2em;
+	span{
+		display: block;
+	}
+	.error{
+		color: #A53734;
+	}
+	.warning{
+		color: #D8DB4A;
+	}
+	.valid{
+		color: #60A158;
+	}
+}
+
+// colors
+
+.php{
+	color: #8892BF;
+}
+.server{
+	color: #818181;
+}
+.symfony{
+	color: #000000;
+}
+.majesteel{
+	color: #7CB7E0;
+}
