@@ -114,6 +114,24 @@ section.framework .warning {
 section.framework .valid {
   color: #60A158;
 }
+section.requirements p {
+  margin-top: 0;
+}
+section.requirements div {
+  padding: 20px;
+}
+section.requirements span {
+  display: block;
+}
+section.requirements .error {
+  color: #A53734;
+}
+section.requirements .warning {
+  color: #D8DB4A;
+}
+section.requirements .valid {
+  color: #60A158;
+}
 .php {
   color: #8892BF;
 }

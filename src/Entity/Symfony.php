@@ -81,6 +81,14 @@ Class Symfony {
 
 	}
 
+	public function getRequirements(){
+		return $this->requirements;
+	}
+
+	public function getOptionalRequirements(){
+		return $this->optionalRequirements;
+	}
+
 	public function getSevere(){
 		if ($this->severe != 0)
 			$this->severe = 0;

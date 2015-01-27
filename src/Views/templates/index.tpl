@@ -55,13 +55,13 @@
 {* Symfony Informations *}
 <section class="row main-board symfony">
 	<div class="mobile-3 tablet-6 desktop-12">
-			<span class="icon-prog-symfony"></span>
+			<a href="http://{$smarty.server.SERVER_NAME}/symfony"><span class="icon-prog-symfony"></span></a>
 			<h3 class="">Symfony</h3>
 	</div>
 </section>
 <section class="row infos framework">
 	<div class="mobile-3 tablet-3 desktop-4 error">
-		<a href="http://{$smarty.server.SERVER_NAME}/symfony"><span class="icon_error-oct"></span></a>
+		<span class="icon_error-oct"></span>
 		<span>{$symfony->getSevere()} Errors</span>
 	</div>
 	<div class="mobile-3 tablet-3 desktop-4 warning">
