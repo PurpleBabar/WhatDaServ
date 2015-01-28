@@ -1,9 +1,9 @@
 {
-    "name": "purplebabar/flightpilot",
+    "name": "purplebabar/whatdaserv",
     "type": "project",
-    "description": "This is a Backbone to build simple app with Flight",
-    "version": "1.0.2",
-    "time": "2015/01/17",
+    "description": "The simple WebApp to know what's on your server",
+    "version": "1.0.0",
+    "time": "2015/01/28",
     "license": "MIT",
     "authors": [
         {
