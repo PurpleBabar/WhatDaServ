@@ -1,5 +1,6 @@
-<ul class='mobile-5 tablet-5 desktop-5 centered'>
+<ul class='mobile-5 tablet-5 desktop-5 centered menu'>
 	<li><a href="/">Main infos</a></li>
+	<li><a href="/php-infos">Php infos</a></li>
 	<li><a href="/symfony">Symfony's Corner</a>
 		{if $symfony->getSevere() > 0}
 			<span class="icon_error-oct error"></span>

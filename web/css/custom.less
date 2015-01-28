@@ -46,7 +46,7 @@ a{
 	position: fixed;
 	li{
 		display: inline-block;
-		width: auto;
+		width: 100%;
 		margin-right: 20px;
 		height: 40px;
 	}
@@ -62,6 +62,33 @@ a{
 		}
 	}
 }
+.slicknav_menu{
+	display: none;
+}
+footer{
+	display: none;
+}
+@media screen and (max-width: 767px) {
+	.nav{
+		display: none;
+	}
+	.slicknav_menu{
+		display: block;
+	}
+	footer{
+		background-color: #414141;
+		display: block;
+		font-size: 15px;
+		margin-top: 40px;
+		width: 100%;
+		text-align: center;
+		span{
+			font-family: Pacifico;
+			color: #865F93;
+		}
+	}
+
+}
 
 
 // Content part
@@ -69,6 +96,12 @@ a{
 	width: 80%;
 	margin-left: 20%;
 	min-height: 100%;
+}
+@media screen and (max-width: 767px) {
+	.content{
+		width: 100%;
+		margin-left: 0;
+	}
 }
 .mainTitle{
 	font-size: 30px;

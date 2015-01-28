@@ -16,6 +16,8 @@
         {block name='js'}
         <!--[if lt IE 8]><script src="http://{$smarty.server.SERVER_NAME}/css/elegant/elegantlte-ie7.js"></script><![endif]-->
         <!--[if lt IE 8]><script src="http://{$smarty.server.SERVER_NAME}/css/pictonic/pictonic.min.js"></script><![endif]-->
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="http://{$smarty.server.SERVER_NAME}/js/jquery.slicknav.min.js"></script>        
         {/block}  
         
         {block name='css'}
@@ -26,15 +28,14 @@
         <link href='http://{$smarty.server.SERVER_NAME}/css/gridlock/fs.gridlock.ie.css' rel='stylesheet' type='text/css'>
         <link href='http://{$smarty.server.SERVER_NAME}/css/gridlock/fs.gridlock.css' rel='stylesheet' type='text/css'>
         <link href='http://{$smarty.server.SERVER_NAME}/css/custom.css' rel='stylesheet' type='text/css'>
-        {* <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'> *}
+        <link href='http://{$smarty.server.SERVER_NAME}/css/slicknav.css' rel='stylesheet' type='text/css'>
         {/block}
 
     </head>
     {/block}
     
     <body class="raleway gridlock">
-        <div class="nav desktop-4">
+        <div class="nav mobile-3 desktop-4">
             {block name='header'}
                 {include 'parts/menu.tpl'}
             {/block}
@@ -48,6 +49,12 @@
                 
             {/block}
             {* <div class="row">{block name='footer'}{/block}</div> *}
+            <footer>Made By <a href="https://github.com/PurpleBabar"><span>PurpleBabar</span></a></footer>
         </div>
+        <script>
+        $(function() {
+            $('.menu').slicknav();
+        });
+    </script>
     </body>
 </html>
