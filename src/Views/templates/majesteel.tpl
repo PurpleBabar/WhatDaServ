@@ -4,7 +4,6 @@
 <section class="row main-board majesteel">
 	<div class="mobile-3 tablet-6 desktop-12">
 			<img src="/images/majesteel.png" alt="">
-			<h3 class="">Majesteel</h3>
 	</div>
 </section>
 <section class="row infos requirements">

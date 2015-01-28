@@ -45,19 +45,37 @@ class IndexController{
 	public static function phpInfos(){
 
 		$php = array();
-		$php['versionScript'] = phpversion();
-		$php['versionShell'] = shell_exec("php -v");
+		$php['version'] = phpversion();
 		$iniVars = ini_get_all();
-		// a coupler avec ini_get();
+
 		$loadedExtensions = get_loaded_extensions();
+		// $ext = new ReflectionExtension('mysqli');
+		// $ext->info();
 
-		// memory_get_peak_usage() memory_get_usage()
+		$memoryPeak = memory_get_peak_usage();
+		$memoryUsage = memory_get_usage();
 
-		// php_ini_loaded_file() + php_ini_scanned_files()
+		$iniLoaded = php_ini_loaded_file();
+		$iniScanned = php_ini_scanned_files();
 
+		$symfony = new Symfony();
+		$symfony->initRequirements();
+		$symfony->initOptionalRequirements();
+
+		$majesteel = new MajesTeel();
+		$majesteel->initRequirements();
+		$majesteel->initOptionalRequirements();
 
 		Flight::render('templates/phpInfos.tpl', array(
-			'php' => $php
+			'php' => $php,
+			'iniVars' => $iniVars,
+			'loadedExtensions' => $loadedExtensions,
+			'memoryPeak' => $memoryPeak,
+			'memoryUsage' => $memoryUsage,
+			'iniLoaded' => $iniLoaded,
+			'iniScanned' => $iniScanned,
+			'symfony' => $symfony,
+			'majesteel' => $majesteel
 		));
 	}
 
@@ -67,18 +85,28 @@ class IndexController{
 		$symfony->initRequirements();
 		$symfony->initOptionalRequirements();
 
+		$majesteel = new MajesTeel();
+		$majesteel->initRequirements();
+		$majesteel->initOptionalRequirements();
+
 		Flight::render('templates/symfony.tpl', array(
-			'symfony' => $symfony
+			'symfony' => $symfony,
+			'majesteel' => $majesteel
 		));
 	}
 
 	public static function majesteel(){
+
+		$symfony = new Symfony();
+		$symfony->initRequirements();
+		$symfony->initOptionalRequirements();
 
 		$majesteel = new MajesTeel();
 		$majesteel->initRequirements();
 		$majesteel->initOptionalRequirements();
 
 		Flight::render('templates/majesteel.tpl', array(
+			'symfony' => $symfony,
 			'majesteel' => $majesteel
 		));
 	}

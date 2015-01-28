@@ -1,3 +1,4 @@
 vendor/*
 bteel/*
 app/cache/*
+composer.lock

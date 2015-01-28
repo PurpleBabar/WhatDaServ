@@ -4,7 +4,6 @@
 <section class="row main-board symfony">
 	<div class="mobile-3 tablet-6 desktop-12">
 			<span class="icon-prog-symfony"></span>
-			<h3 class="">Symfony</h3>
 	</div>
 </section>
 <section class="row infos requirements">

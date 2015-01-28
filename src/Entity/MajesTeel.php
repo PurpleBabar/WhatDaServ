@@ -32,10 +32,10 @@ Class Majesteel {
         $this->optionalRequirements['imagickExtension'] = extension_loaded('imagick') ? true : 'Please install imagick extension for better treatment on images' ;
 
         $returnVal = shell_exec("which ssh");
-        $this->optionalRequirements['sshExtension'] = empty($returnVal) ? true : 'For a better use, install ssh' ;
+        $this->optionalRequirements['sshExtension'] = !empty($returnVal) ? true : 'For a better use, install ssh' ;
 
         $returnVal = shell_exec("which git");
-        $this->optionalRequirements['gitExtension'] = empty($returnVal) ? true : 'For a better use, install git' ;
+        $this->optionalRequirements['gitExtension'] = !empty($returnVal) ? true : 'For a better use, install git' ;
 
     }
 

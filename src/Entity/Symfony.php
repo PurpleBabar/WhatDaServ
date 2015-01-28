@@ -43,16 +43,13 @@ Class Symfony {
 
 		$this->requirements['simpleXMLExtension'] = extension_loaded('simpleXML') ? true : 'Please install simpleXML extension' ;
 
-		$this->requirements['apcExtension'] = extension_loaded('apc') ? true : 'Please install apc extension' ;
-		$this->requirements['apcIni'] = ini_get('apc.enabled') ? true : 'Please enable apc extension in INI file' ;
-
 		$this->requirements['pcreExtension'] = extension_loaded('pcre') ? true : 'Please install pcre extension' ;
 	}
 
 	public function initOptionalRequirements(){
 
 		$phpVersion = phpversion();
-		$this->optionalRequirements['phpVersion'] = version_compare($phpVersion, '5.3.8', 'le') || version_compare($phpVersion, '5.4.11', 'le') ? true : 'It is recommended that your PHP version match 5.3.8+ or 5.4.11+';
+		$this->optionalRequirements['phpVersion'] = version_compare($phpVersion, '5.3.8', 'le') || version_compare($phpVersion, '5.4.11', 'le') ? 'It is recommended that your PHP version match 5.3.8+ or 5.4.11+' : true;
 		if(version_compare($phpVersion, '5.3.16', 'eq')||version_compare($phpVersion, '5.3.18', 'eq')||version_compare($phpVersion, '5.3.4', 'eq')||version_compare($phpVersion, '5.3.8', 'eq')||version_compare($phpVersion, '5.4.0', 'eq'))
 			$this->optionalRequirements['BuggyPhp'] = 'Your PHP version causes some bugs into symfony please upgrade or downgrade your version';
 
@@ -65,6 +62,9 @@ Class Symfony {
 		$this->optionalRequirements['xmlExtension'] = extension_loaded('xml') ? true : 'Please install xml extension' ;
 
 		$this->optionalRequirements['intlExtension'] = extension_loaded('intl') ? true : 'Please install intl extension' ;
+
+		$this->optionalRequirements['apcExtension'] = extension_loaded('apc') ? true : 'Please install apc extension' ;
+		$this->optionalRequirements['apcIni'] = ini_get('apc.enabled') ? true : 'Please enable apc extension in INI file' ;
 
 		if( (!extension_loaded('apc') && !ini_get('apc.enabled')) || (!extension_loaded('apcu') && !ini_get('apc.enabled')) || (!extension_loaded('opcache') && !ini_get('opcache.enable')) || (!extension_loaded('eaccelerator') && !ini_get('eaccelerator.enable')) || !extension_loaded('xcache') )
 			$this->optionalRequirements['phpAccelerator'] = 'There is no PHP accelerator installed, please install one (APC recommended)';

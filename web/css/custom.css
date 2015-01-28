@@ -14,7 +14,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #feff51;
+  color: #865f93;
 }
 .raleway {
   font-family: Raleway;
@@ -46,6 +46,7 @@ a:hover {
   display: inline-block;
   width: auto;
   margin-right: 20px;
+  height: 40px;
 }
 .nav .footer {
   font-size: 15px;
@@ -78,7 +79,10 @@ a:hover {
   color: inherit;
 }
 .main-board a:hover {
-  color: #7CB7E0;
+  color: #865f93;
+}
+div.row {
+  margin-bottom: 30px;
 }
 section.infos + section.main-board {
   margin-top: 50px;
@@ -98,6 +102,10 @@ section.infos + section.main-board {
 .infos .type {
   font-weight: 400;
   color: #7CB7E0;
+}
+.infos .content {
+  font-weight: 200;
+  margin-bottom: 20px;
 }
 section.framework {
   font-size: 2em;
@@ -123,14 +131,8 @@ section.requirements div {
 section.requirements span {
   display: block;
 }
-section.requirements .error {
-  color: #A53734;
-}
-section.requirements .warning {
-  color: #D8DB4A;
-}
-section.requirements .valid {
-  color: #60A158;
+.purple {
+  color: #865F93;
 }
 .php {
   color: #8892BF;
@@ -143,4 +145,13 @@ section.requirements .valid {
 }
 .majesteel {
   color: #7CB7E0;
+}
+.error {
+  color: #A53734;
+}
+.warning {
+  color: #D8DB4A;
+}
+.valid {
+  color: #60A158;
 }
