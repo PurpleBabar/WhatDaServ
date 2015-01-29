@@ -2,7 +2,7 @@
     "name": "purplebabar/whatdaserv",
     "type": "project",
     "description": "The simple WebApp to know what's on your server",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "time": "2015/01/28",
     "license": "MIT",
     "authors": [
